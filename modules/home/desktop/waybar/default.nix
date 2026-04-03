@@ -231,7 +231,7 @@
         all: unset;
         border: none;
         box-shadow: none;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         min-height: 2rem;
         font-family: 'JetBrainsMono Nerd Font Mono', 'monospace';
       }

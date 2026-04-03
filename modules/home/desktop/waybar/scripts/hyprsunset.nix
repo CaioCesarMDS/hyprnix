@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  waybar-hyprsunset = pkgs.writeShellApplication {
+  waybarHyprsunset = pkgs.writeShellApplication {
     name = "waybar-hyprsunset";
     runtimeInputs = with pkgs; [
       systemd
@@ -36,5 +36,5 @@ let
   };
 in
 {
-  home.packages = [ waybar-hyprsunset ];
+  home.packages = [ waybarHyprsunset ];
 }
