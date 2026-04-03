@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  waybar-colorpicker = pkgs.writeShellApplication {
+  waybarColorpicker = pkgs.writeShellApplication {
     name = "waybar-colorpicker";
 
     runtimeInputs = with pkgs; [
@@ -46,7 +46,7 @@ let
 
           tooltip="''${tooltip//$'\n'/\\n}"
 
-          printf '{"text":"<span color=\"%s\"></span>", "tooltip":"%s"}\n' "$text" "$tooltip"
+          printf "{\"text\":\"<span color='%s'></span>\",\"tooltip\":\"%s\"}\n" "$text" "$tooltip"
           exit 0
           ;;
       esac
@@ -71,5 +71,5 @@ let
   };
 in
 {
-  home.packages = [ waybar-colorpicker ];
+  home.packages = [ waybarColorpicker ];
 }
