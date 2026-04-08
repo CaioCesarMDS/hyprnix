@@ -26,11 +26,6 @@
       };
     };
 
-    cursor = {
-      hide_on_key_press = true;
-      inactive_timeout = 10;
-    };
-
     misc = {
       force_default_wallpaper = 0;
       disable_hyprland_logo = true;
