@@ -36,6 +36,13 @@
         "nvidia-drm.modeset=1"
         "nvidia_drm.fbdev=1"
       ];
+
+      kernelModules = [ 
+        "nvidia" 
+        "nvidia_modeset" 
+        "nvidia_uvm" 
+        "nvidia_drm" 
+      ];
     })
 
     (lib.mkIf (vars.gpu == "amd") {

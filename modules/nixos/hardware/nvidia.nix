@@ -5,11 +5,11 @@
 
   hardware = {
     nvidia = {
-      open = false;
+      open = true;
       modesetting.enable = true;
-      powerManagement.enable = true;
+      powerManagement.enable = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
     graphics = {

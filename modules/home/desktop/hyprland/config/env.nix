@@ -9,12 +9,11 @@
     env = [
       # --- Wayland & Ozone ---
       "NIXOS_OZONE_WL,1"
-      "ELECTRON_OZONE_PLATFORM_HINT,wayland"
-      "OZONE_PLATFORM,wayland"
+      "ELECTRON_OZONE_PLATFORM_HINT,auto"
       "MOZ_ENABLE_WAYLAND,1"
 
       # --- Toolkits ---
-      "SDL_VIDEODRIVER,wayland,x11"
+      "SDL_VIDEODRIVER,wayland"
       "CLUTTER_BACKEND,wayland"
       "GDK_BACKEND,wayland,x11,*"
 
@@ -39,10 +38,8 @@
     ++ lib.optionals (vars.gpu == "nvidia") [
       "GBM_BACKEND,nvidia-drm"
       "LIBVA_DRIVER_NAME,nvidia"
+      "NVD_BACKEND,direct"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "__GL_GSYNC_ALLOWED,1"
-      "__GL_VRR_ALLOWED,1"
-      "__GL_MaxFramesAllowed,1"
     ];
   };
 }
