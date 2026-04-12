@@ -86,11 +86,15 @@
     };
 
     style = ''
-      @define-color background #0d0d0d;
-      @define-color background2 rgba(255, 255, 255, 0.1);
-      @define-color text #e5e5e5;
-      @define-color muted-text #a0a0a0;
-      @define-color border #2a2a2a;
+      @define-color background #2A2A2A;
+      @define-color background-alt #383838;
+
+      @define-color foreground #CCCCCC;
+      @define-color foreground-muted #A0A0A0;
+
+      @define-color accent-primary #B392F0;
+      @define-color accent-active  #79B8FF;
+      @define-color accent-urgent  #FF7A84;
 
       :root {
         --notification-icon-size: 50px;
@@ -99,7 +103,7 @@
       * {
         outline: none;
         text-shadow: none;
-        color: @text;
+        color: @foreground;
         font-family: "JetBrainsMono Nerd Font Mono", "monospace";
       }
 
@@ -162,7 +166,7 @@
       }
 
       .close-button {
-        background-color: #40404c;
+        background-color: @background-alt;
         border-radius: 100%;
         min-width: 0.5rem;
         min-height: 0.5rem;
@@ -171,7 +175,7 @@
       }
 
       .close-button:hover {
-        background-color: rgb(242, 36, 36);
+        background-color: @accent-urgent;
         transition: all 0.15s ease-in-out;
       }
 
@@ -217,16 +221,16 @@
       .widget-dnd {
         min-height: 50px;
         padding: 0.8rem;
-        color: @text;
+        color: @foreground;
       }
 
       .widget-dnd > switch {
         border-radius: 12px;
-        background-color: @muted-text;
+        background-color: @foreground-muted;
       }
 
       .widget-dnd > switch:checked {
-        background-color: @text;
+        background-color: @foreground;
       }
 
       .widget-dnd > switch slider {
@@ -248,7 +252,7 @@
 
       trough highlight {
         padding: 0.5rem;
-        background-color: @text;
+        background-color: @foreground;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
       }
 
@@ -272,7 +276,7 @@
 
       .widget-buttons-grid > flowbox > flowboxchild > button label {
         font-size: 1.6rem;
-        color: @text;
+        color: @foreground;
         transition: all 0.7s ease;
       }
 
@@ -288,13 +292,13 @@
       }
 
       .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-        background-color: @muted-text;
+        background-color: @foreground-muted;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
         transition: all 0.5s ease;
       }
 
       .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-        background-color: @text;
+        background-color: @foreground;
       }
 
       .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {

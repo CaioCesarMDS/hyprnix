@@ -1,10 +1,23 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  imports = [ ./config ];
+  imports = [
+    ./hypridle
+    ./hypr
+    ./hyprlock
+    ./rofi
+    ./swaync
+    ./waybar
+  ];
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    systemd.enable = false;
-  };
+  home.packages = with pkgs; [
+    hyprshot
+    hyprpicker
+    hyprsunset
+    hyprcursor
+    swww
+    wl-clipboard
+    cliphist
+    nautilus
+  ];
 }

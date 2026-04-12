@@ -29,9 +29,9 @@
       "XDG_SESSION_DESKTOP,Hyprland"
 
       # --- Cursor ---
-      "HYPRCURSOR_THEME,Bibata-Modern-Classic"
+      "HYPRCURSOR_THEME,Bibata-Modern-Ice"
       "HYPRCURSOR_SIZE,20"
-      "XCURSOR_THEME,Bibata-Modern-Classic"
+      "XCURSOR_THEME,Bibata-Modern-Ice"
       "XCURSOR_SIZE,20"
     ]
     # NVIDIA-specific environment variables

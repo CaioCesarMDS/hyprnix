@@ -221,11 +221,15 @@
 
     # --- STYLE ---
     style = ''
-      @define-color background #0d0d0d;
-      @define-color background2 rgba(255, 255, 255, 0.1);
-      @define-color text #e5e5e5;
-      @define-color muted-text #a0a0a0;
-      @define-color border #2a2a2a;
+      @define-color background #2A2A2A;
+      @define-color background-alt #383838;
+
+      @define-color foreground #CCCCCC;
+      @define-color foreground-muted #A0A0A0;
+
+      @define-color accent-primary #B392F0;
+      @define-color accent-active  #79B8FF;
+      @define-color accent-urgent  #FF7A84;
 
       * {
         all: unset;
@@ -242,8 +246,8 @@
 
       tooltip {
         background: @background;
-        border: 2px solid @border;
-        color: @text;
+        border: 2px solid @background-alt;
+        color: @foreground;
         border-radius: 8px;
       }
 
@@ -260,7 +264,7 @@
       #battery:hover,
       #custom-power:hover {
         transition: all 0.3s ease;
-        color: @muted-text;
+        color: @accent-active;
       }
 
       /* Modules Left */
@@ -272,8 +276,8 @@
         margin: 0.3rem 0 0 0.6rem;
         padding: 0 1rem;
         transition: all 0.3s ease;
-        color: @text;
-        background-color: @background2;
+        color: @foreground;
+        background-color: @background-alt;
         border-radius: 8px;
       }
 
@@ -291,13 +295,13 @@
       #workspaces {
         margin: 0.3rem 0 0 0;
         padding: 0px 0.7rem;
-        background-color: @background2;
+        background-color: @background-alt;
         border-radius: 8px;
       }
 
       #workspaces button {
         padding: 0 0.4rem;
-        color: alpha(@muted-text, 0.4);
+        color: alpha(@foreground-muted, 0.4);
         transition: all 0.2s ease;
       }
 
@@ -308,7 +312,7 @@
       }
 
       #workspaces button.active {
-        color: @muted-text;
+        color: @foreground-muted;
         text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
       }
 
@@ -324,7 +328,7 @@
       }
 
       #workspaces button.empty.active {
-        color: @muted-text;
+        color: @foreground-muted;
         text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
       }
 
@@ -335,8 +339,8 @@
         font-size: 1.3rem;
         margin: 0.3rem 0 0 0.6rem;
         padding: 0 1rem;
-        color: @text;
-        background-color: @background2;
+        color: @foreground;
+        background-color: @background-alt;
         border-radius: 8px;
       }
 
@@ -368,8 +372,8 @@
       #battery,
       #custom-power {
         margin-top: 0.3rem;
-        color: @text;
-        background-color: rgba(255, 255, 255, 0.1);
+        color: @foreground;
+        background-color: @background-alt;
       }
 
       #memory,
@@ -392,7 +396,7 @@
       #battery,
       #custom-power {
         padding: 0 0.7rem;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: @background-alt;
       }
 
       #bluetooth {

@@ -7,7 +7,5 @@
     discord
     spotify
     qbittorrent
-
-    claude-code
   ];
 }

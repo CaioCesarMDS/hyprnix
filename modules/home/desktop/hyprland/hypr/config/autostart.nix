@@ -73,7 +73,7 @@
   # --- Hyprland exec-once ---
   wayland.windowManager.hyprland.settings = {
     "exec-once" = [
-      "hyprctl setcursor Bibata-Modern-Classic 20"
+      "hyprctl setcursor Bibata-Modern-Ice 20"
       "waybar"
       "swaync"
     ];
