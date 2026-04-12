@@ -3,14 +3,6 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
-    style.name = "kvantum";
+    style.name = "adwaita-dark";
   };
-
-  home.packages = with pkgs; [
-    (catppuccin-kvantum.override {
-      accent = "blue";
-      variant = "mocha";
-    })
-  ];
 }

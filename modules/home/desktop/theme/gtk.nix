@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   gtk = {
@@ -12,19 +12,14 @@
     };
 
     theme = {
-      name = "catppuccin-mocha-blue-standard";
-      package = (
-        pkgs.catppuccin-gtk.override {
-          variant = "mocha";
-          accents = [ "blue" ];
-        }
-      );
+      name = "Colloid-Dark";
+      package = pkgs.colloid-gtk-theme;
     };
 
     cursorTheme = {
-      name = "Bibata-Modern-Classic";
+      name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
-      size = 24;
+      size = 20;
     };
   };
 }
