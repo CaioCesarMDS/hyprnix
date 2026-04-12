@@ -5,7 +5,6 @@
     firefox
     vscode
     discord
-    spotify
     qbittorrent
   ];
 }

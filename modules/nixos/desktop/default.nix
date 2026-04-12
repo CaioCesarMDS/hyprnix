@@ -1,8 +1,16 @@
-{ ... }:
+{ lib, vars, ... }:
 
+let
+  desktop = vars.desktop;
+in
 {
   imports = [
-    ./hyprland.nix
     ./xdg-portal.nix
+  ]
+  ++ lib.optionals (desktop == "hyprland") [
+    ./hyprland.nix
+  ]
+  ++ lib.optionals (desktop == "gnome") [
+    ./gnome.nix
   ];
 }

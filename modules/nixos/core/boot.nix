@@ -9,7 +9,7 @@
         timeout = 45;
         systemd-boot = {
           enable = true;
-          configurationLimit = 10;
+          configurationLimit = 5;
         };
         efi = {
           canTouchEfiVariables = true;
@@ -37,11 +37,11 @@
         "nvidia_drm.fbdev=1"
       ];
 
-      kernelModules = [ 
-        "nvidia" 
-        "nvidia_modeset" 
-        "nvidia_uvm" 
-        "nvidia_drm" 
+      kernelModules = [
+        "nvidia"
+        "nvidia_modeset"
+        "nvidia_uvm"
+        "nvidia_drm"
       ];
     })
 

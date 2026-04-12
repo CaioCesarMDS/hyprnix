@@ -4,7 +4,6 @@
   imports = [
     ./${vars.gpu}.nix
     ./bluetooth.nix
-    ./power.nix
   ];
 
   hardware = {

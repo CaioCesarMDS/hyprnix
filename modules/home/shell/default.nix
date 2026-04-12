@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./terminal/kitty.nix
+    ./terminal/ghostty.nix
 
     ./fzf.nix
     ./starship.nix

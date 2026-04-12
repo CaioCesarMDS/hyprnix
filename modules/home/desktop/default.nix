@@ -1,8 +1,16 @@
-{ ... }:
+{ lib, vars, ... }:
 
+let
+  desktop = vars.desktop;
+in
 {
   imports = [
-    ./hyprland
     ./theme
+  ]
+  ++ lib.optionals (desktop == "hyprland") [
+    ./hyprland
   ];
+  # ++ lib.optionals (desktop == "gnome") [
+  #   ./gnome
+  # ];
 }
